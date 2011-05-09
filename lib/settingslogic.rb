@@ -6,10 +6,6 @@ class Settingslogic < Hash
   class MissingSetting < StandardError; end
 
   class << self
-    def name # :nodoc:
-      instance.key?("name") ? instance.name : super
-    end
-
     # Enables Settings.get('nested.key.name') for dynamic access
     def get(key)
       parts = key.split('.')

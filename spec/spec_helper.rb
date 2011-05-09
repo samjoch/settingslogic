@@ -1,4 +1,4 @@
-require 'spec'
+require 'rspec'
 require 'rubygems'
 require 'ruby-debug' if RUBY_VERSION < '1.9'  # ruby-debug does not work on 1.9.1 yet
 
@@ -14,5 +14,5 @@ Object.send :define_method, 'collides' do
   'collision'
 end
 
-Spec::Runner.configure do |config|
+RSpec.configure do |config|
 end
